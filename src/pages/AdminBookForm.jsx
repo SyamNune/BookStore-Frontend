@@ -197,7 +197,7 @@ const AdminBookForm = () => {
       setIsSubmitting(true);
       try {
         // Send data to backend
-        const response = await axios.post("http://localhost:8000/api/submit", formData);
+        const response = await axios.post("https://bookstore-backend-8eb1.onrender.com/api/submit", formData);
 
         toast.success(response.data.message || `Book "${formData.book_name}" added successfully!`);
 
